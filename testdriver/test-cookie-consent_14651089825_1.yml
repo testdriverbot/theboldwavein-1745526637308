@@ -1,0 +1,13 @@
+version: 4.2.29
+session: 680aa2e47789f480c38a6a42
+steps:
+  - prompt: Click on "Accept all" in the cookie consent popup.
+    commands:
+      - command: hover-text
+        text: Accept all
+        description: accept all button in the cookie consent popup
+        action: click
+  - prompt: Assert that the popup disappears.
+    commands:
+      - command: assert
+        expect: the cookie consent popup is not visible
