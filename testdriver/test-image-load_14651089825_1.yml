@@ -1,0 +1,17 @@
+version: 4.2.29
+session: 680aa330522f14879ad487c1
+steps:
+  - prompt: Scroll through the homepage.
+    commands:
+      - command: hover-text
+        text: Accept all
+        description: accept all button on the cookie consent popup
+        action: click
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+  - prompt: Assert that all images load without broken links.
+    commands:
+      - command: assert
+        expect: all images are visible and not broken
