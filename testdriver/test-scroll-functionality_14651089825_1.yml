@@ -1,0 +1,19 @@
+version: 4.2.29
+session: 680aa2c47789f480c38a6a29
+steps:
+  - prompt: Scroll down the homepage.
+    commands:
+      - command: hover-text
+        text: Accept all
+        description: button to accept cookies in the consent popup
+        action: click
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+  - prompt: Assert that additional content loads properly without layout issues.
+    commands:
+      - command: assert
+        expect: >-
+          the text "UI-TARS 1.5 AI Real-World Applications You Cant Ignore" is
+          visible without layout issues
