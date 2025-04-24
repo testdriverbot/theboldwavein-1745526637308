@@ -1,0 +1,9 @@
+version: 4.2.29
+session: 680aa3307789f480c38a6a7f
+steps:
+  - prompt: Assert that the blog post opens and displays the full content.
+    commands:
+      - command: assert
+        expect: >-
+          UI-TARS 1.5's versatility makes it a transformative tool across
+          industries and use cases
